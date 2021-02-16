@@ -1,0 +1,8 @@
+path: null
+
+ell_file: data/ell.npy
+cls_file: data/cls.npy
+dcls_file: data/dcls.npy
+
+# Aliases for automatic covariance matrix
+aliases: [ccl_cobaya]
