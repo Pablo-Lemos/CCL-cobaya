@@ -6,6 +6,14 @@ import camb
 calculates the PK, chi and D, and passes it to CCL
 '''
 
+# Binning function
+def bin(ell,theory_cl,lmin,lmax):
+	binned_theory_cl = np.zeros_like(lmin)
+	for i in range(len(lmin)):
+		binned_theory_cl[i] = np.mean(theory_cl[(ell >= lmin[i]) & (ell < lmax[i])])
+	return binned_theory_cl
+    
+
 class CCL_CAMB_Wrapper: 
     def __init__(self, pars={}):
         if 'H0' not in pars:

@@ -37,8 +37,8 @@ class CCL_Likelihood(Likelihood):
         H0 = self.wrapper.hubble[0]
         h = H0/100.
         self.wrapper.z = z
-        self.wrapper.k = kh*h
-        self.wrapper.pk = PK/h**3.
+        self.wrapper.k = kh#*h
+        self.wrapper.pk = PK#/h**3.
         self.wrapper.start_ccl()
 
         lens = ccl.CMBLensingTracer(self.wrapper.cosmo_ccl, z_source=1100.)
